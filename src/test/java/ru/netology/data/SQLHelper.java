@@ -31,23 +31,6 @@ public class SQLHelper {
         return new DataHelper.VerificationCode(code);
     }
 
-//    @Data
-//    @NoArgsConstructor
-//    public static class SQLAuthCode {
-//        private String id;
-//        private String user_id;
-//        private String code;
-//        private String created;
-//
-//    }
-//
-//    @SneakyThrows
-//    public static DataHelper.VerificationCode getVerificationCodeFor() {
-//        var codeSQL = "SELECT code FROM auth_codes ORDER BY created  DESC LIMIT 1";
-//        var connect = getConnect();
-//        var code = runner.query(connect, codeSQL, new BeanHandler<>(SQLAuthCode.class));
-//        return new DataHelper.VerificationCode(code.getCode());
-//    }
 
     @SneakyThrows
     public static void cleanData() {
